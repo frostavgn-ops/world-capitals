@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тесты - Столицы стран мира</title>
+    
+    <!-- Все стили -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <span class="logo-text">WorldCapitals</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="knowledge-base.html" class="nav-link"><i class="fas fa-book"></i> База знаний</a></li>
+                    <li><a href="tests.html" class="nav-link active"><i class="fas fa-question-circle"></i> Тесты</a></li>
+                    <li><a href="about.html" class="nav-link"><i class="fas fa-info-circle"></i> О проекте</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="btn btn-icon" id="theme-toggle" title="Сменить тему">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="hamburger" id="hamburger" aria-label="Меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Test Configuration -->
+    <section class="section test-config">
+        <div class="container">
+            <h1 class="section-title">Выберите тест</h1>
+            <p class="section-subtitle">Настройте параметры тестирования по вашему желанию</p>
+            
+            <div class="config-card">
+                <div class="config-section">
+                    <h3><i class="fas fa-sliders-h"></i> Параметры теста</h3>
+                    
+                    <div class="config-options">
+                        <div class="option-group">
+                            <label for="difficulty">
+                                <i class="fas fa-chart-line"></i> Уровень сложности
+                            </label>
+                            <div class="difficulty-options">
+                                <div class="difficulty-option" data-level="easy">
+                                    <div class="difficulty-icon">
+                                        <i class="fas fa-seedling"></i>
+                                    </div>
+                                    <div class="difficulty-info">
+                                        <h4>Легкий</h4>
+                                        <p>10 вопросов с подсказками</p>
+                                    </div>
+                                    <div class="difficulty-selector">
+                                        <div class="selector-dot"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="difficulty-option" data-level="medium">
+                                    <div class="difficulty-icon">
+                                        <i class="fas fa-tree"></i>
+                                    </div>
+                                    <div class="difficulty-info">
+                                        <h4>Средний</h4>
+                                        <p>15 вопросов без подсказок</p>
+                                    </div>
+                                    <div class="difficulty-selector">
+                                        <div class="selector-dot"></div>
+                                    </div>
+                                </div>
+                                
+                                <div class="difficulty-option" data-level="hard">
+                                    <div class="difficulty-icon">
+                                        <i class="fas fa-mountain"></i>
+                                    </div>
+                                    <div class="difficulty-info">
+                                        <h4>Сложный</h4>
+                                        <p>20 вопросов на время</p>
+                                    </div>
+                                    <div class="difficulty-selector">
+                                        <div class="selector-dot"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="hidden" id="difficulty" value="medium">
+                        </div>
+                        
+                        <div class="option-group">
+                            <label for="continent">
+                                <i class="fas fa-globe-americas"></i> Континент
+                            </label>
+                            <div class="continent-options">
+                                <div class="continent-option" data-continent="all">
+                                    <div class="continent-icon">🌍</div>
+                                    <span>Все континенты</span>
+                                </div>
+                                <div class="continent-option" data-continent="europe">
+                                    <div class="continent-icon">🇪🇺</div>
+                                    <span>Европа</span>
+                                </div>
+                                <div class="continent-option" data-continent="asia">
+                                    <div class="continent-icon">🌏</div>
+                                    <span>Азия</span>
+                                </div>
+                                <div class="continent-option" data-continent="africa">
+                                    <div class="continent-icon">🌍</div>
+                                    <span>Африка</span>
+                                </div>
+                                <div class="continent-option" data-continent="north-america">
+                                    <div class="continent-icon">🌎</div>
+                                    <span>Сев. Америка</span>
+                                </div>
+                                <div class="continent-option" data-continent="south-america">
+                                    <div class="continent-icon">🌎</div>
+                                    <span>Юж. Америка</span>
+                                </div>
+                                <div class="continent-option" data-continent="oceania">
+                                    <div class="continent-icon">🌊</div>
+                                    <span>Океания</span>
+                                </div>
+                            </div>
+                            <input type="hidden" id="continent" value="all">
+                        </div>
+                        
+                        <div class="option-group">
+                            <label for="question-count">
+                                <i class="fas fa-list-ol"></i> Количество вопросов
+                            </label>
+                            <div class="range-slider">
+                                <input type="range" id="question-count" min="5" max="30" value="15" step="5">
+                                <div class="range-value">
+                                    <span id="question-count-value">15</span> вопросов
+                                </div>
+                                <div class="range-ticks">
+                                    <span>5</span>
+                                    <span>10</span>
+                                    <span>15</span>
+                                    <span>20</span>
+                                    <span>25</span>
+                                    <span>30</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="config-section">
+                    <h3><i class="fas fa-chart-bar"></i> Ваша статистика</h3>
+                    <div class="stats-preview" id="stats-preview">
+                        <!-- Статистика будет загружена через JavaScript -->
+                        <div class="loading-stats">
+                            <i class="fas fa-spinner fa-spin"></i>
+                            <p>Загрузка статистики...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="config-actions">
+                <button class="btn btn-primary btn-large" id="start-test">
+                    <i class="fas fa-play-circle"></i> Начать тест
+                </button>
+                <button class="btn btn-secondary" id="quick-test">
+                    <i class="fas fa-bolt"></i> Быстрый тест (10 вопр.)
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Active Test Section (скрыта по умолчанию) -->
+    <section class="section active-test" id="active-test" style="display: none;">
+        <div class="container">
+            <div class="test-header">
+                <button class="btn btn-icon" id="back-to-config">
+                    <i class="fas fa-arrow-left"></i> Назад к настройкам
+                </button>
+                <div class="test-info">
+                    <div class="test-progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progress-fill"></div>
+                        </div>
+                        <div class="progress-text">
+                            Вопрос <span id="current-question">1</span> из <span id="total-questions">15</span>
+                        </div>
+                    </div>
+                    <div class="test-timer" id="test-timer">
+                        <i class="fas fa-clock"></i> <span id="timer-value">--:--</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="test-content">
+                <div class="question-card" id="question-card">
+                    <!-- Вопросы будут загружены динамически -->
+                    <div class="loading">
+                        <i class="fas fa-spinner fa-spin"></i>
+                        <p>Загрузка вопросов...</p>
+                    </div>
+                </div>
+                
+                <div class="navigation-buttons">
+                    <button class="btn btn-secondary" id="prev-question" disabled>
+                        <i class="fas fa-chevron-left"></i> Назад
+                    </button>
+                    <button class="btn btn-primary" id="next-question">
+                        Следующий <i class="fas fa-chevron-right"></i>
+                    </button>
+                    <button class="btn btn-accent" id="finish-test" style="display: none;">
+                        <i class="fas fa-flag-checkered"></i> Завершить тест
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-globe-europe"></i>
+                        </div>
+                        <span class="logo-text">WorldCapitals</span>
+                    </a>
+                    <p class="footer-description">Образовательный проект для изучения столиц стран мира через интерактивные тесты и базу знаний</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="knowledge-base.html">База знаний</a></li>
+                        <li><a href="tests.html">Тесты</a></li>
+                        <li><a href="about.html">О проекте</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Контакты</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> support@worldcapitals.ru</p>
+                        <p><i class="fas fa-graduation-cap"></i> Учебный проект</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 База знаний и тестов по столицам стран мира. Все права защищены.</p>
+                <p>Курсовая работа по дисциплине "Разработка веб и мультимедийных приложений"</p>
+            </div>
+        </div>
+    </footer>
+
+<!-- Все скрипты подключать с путем js/ -->
+<script src="js/data.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/knowledge-base.js"></script>
+<script src="js/tests.js"></script>
+<script src="js/test-results.js"></script>
+</body>
+</html>

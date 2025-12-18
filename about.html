@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>О проекте - Столицы стран мира</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;700;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+<script src="navigation.js"></script>
+</head>
+<body>
+   
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <a href="index.html" class="logo">
+                    <div class="logo-icon">
+                        <i class="fas fa-globe-europe"></i>
+                    </div>
+                    <span class="logo-text">WorldCapitals</span>
+                </a>
+                
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="nav-link"><i class="fas fa-home"></i> Главная</a></li>
+                    <li><a href="knowledge-base.html" class="nav-link"><i class="fas fa-book"></i> База знаний</a></li>
+                    <li><a href="tests.html" class="nav-link"><i class="fas fa-question-circle"></i> Тесты</a></li>
+                    <li><a href="about.html" class="nav-link active"><i class="fas fa-info-circle"></i> О проекте</a></li>
+                </ul>
+                
+                <div class="nav-actions">
+                    <button class="btn btn-icon" id="theme-toggle" title="Сменить тему">
+                        <i class="fas fa-moon"></i>
+                    </button>
+                    <button class="hamburger" id="hamburger" aria-label="Меню">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+   
+    <section class="section about-section">
+        <div class="container">
+            <h1 class="section-title">О проекте</h1>
+            
+            <div class="about-content">
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <h2>Учебный проект</h2>
+                    <p>Веб-приложение "База знаний и тестов по столицам стран мира" разработано в рамках курсовой работы по дисциплине "Разработка веб и мультимедийных приложений".</p>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h2>Цели проекта</h2>
+                    <ul class="goals-list">
+                        <li>Повысить эффективность изучения столиц стран мира</li>
+                        <li>Обеспечить доступ к актуальной географической информации</li>
+                        <li>Создать интерактивную систему тестирования</li>
+                        <li>Вести статистику прогресса без регистрации</li>
+                    </ul>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h2>Для кого этот проект</h2>
+                    <div class="audience-grid">
+                        <div class="audience-item">
+                            <div class="audience-icon">
+                                <i class="fas fa-user-graduate"></i>
+                            </div>
+                            <h4>Школьники</h4>
+                            <p>Изучающие географию</p>
+                        </div>
+                        <div class="audience-item">
+                            <div class="audience-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <h4>Студенты</h4>
+                            <p>Готовящиеся к экзаменам</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-card">
+                    <div class="about-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h2>Технологии</h2>
+                    <div class="tech-stack">
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <a href="index.html" class="logo footer-logo">
+                        <div class="logo-icon">
+                            <i class="fas fa-globe-europe"></i>
+                        </div>
+                        <span class="logo-text">WorldCapitals</span>
+                    </a>
+                    <p class="footer-description">Образовательный проект для изучения столиц стран мира</p>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Навигация</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Главная</a></li>
+                        <li><a href="knowledge-base.html">База знаний</a></li>
+                        <li><a href="tests.html">Тесты</a></li>
+                        <li><a href="about.html">О проекте</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Контакты</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-envelope"></i> support@worldcapitals.ru</p>
+                        <p><i class="fas fa-graduation-cap"></i> Учебный проект</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 База знаний и тестов по столицам стран мира. Курсовая работа.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="navigation.js"></script>
+    <script>
+       
+        document.addEventListener('DOMContentLoaded', function() {
+            // Инициализация темы
+            const themeToggle = document.getElementById('theme-toggle');
+            if (themeToggle) {
+                const savedTheme = localStorage.getItem('theme') || 'light';
+                if (savedTheme === 'dark') {
+                    document.body.classList.add('dark-theme');
+                    themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+                }
+                
+                themeToggle.addEventListener('click', function() {
+                    const isDark = document.body.classList.toggle('dark-theme');
+                    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+                    this.innerHTML = isDark ? 
+                        '<i class="fas fa-sun"></i>' : 
+                        '<i class="fas fa-moon"></i>';
+                });
+            }
+            
+          
+            const hamburger = document.getElementById('hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            if (hamburger && navMenu) {
+                hamburger.addEventListener('click', function() {
+                    navMenu.classList.toggle('active');
+                    
+                
+                    const spans = this.querySelectorAll('span');
+                    if (navMenu.classList.contains('active')) {
+                        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+                        spans[1].style.opacity = '0';
+                        spans[2].style.transform = 'rotate(-45deg) translate(7px, -6px)';
+                    } else {
+                        spans[0].style.transform = 'none';
+                        spans[1].style.opacity = '1';
+                        spans[2].style.transform = 'none';
+                    }
+                });
+            }
+          
+            const currentPage = 'about.html';
+            document.querySelectorAll('.nav-link').forEach(link => {
+                if (link.getAttribute('href') === currentPage) {
+                    link.classList.add('active');
+                } else {
+                    link.classList.remove('active');
+                }
+            });
+        });
+    </script>
+
+<script src="js/data.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/knowledge-base.js"></script>
+<script src="js/tests.js"></script>
+<script src="js/test-results.js"></script>
+</body>
+</html>
